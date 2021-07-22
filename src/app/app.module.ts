@@ -41,7 +41,7 @@ import { LogoComponent } from './components/body/cabecero/logo/logo.component';
     LogoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent, DataService],
+  providers: [DataService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
