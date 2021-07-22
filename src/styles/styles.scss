@@ -1,0 +1,474 @@
+/* iconos de bootstrap */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  //paleta de colores
+  --color-primary: #6c51d8;
+  --color-secondary: #7d68e9;
+  --color-claro: white;
+  --color-gray: gray;
+
+  //fondos
+  --background-general: linear-gradient(100deg, rgb(196, 196, 196), #e3e6ff);
+  --background-target-general: white;
+
+  //bordes de los targets o divs
+  --border-radius-30: 30px;
+  --border-radius-20: 20px;
+  --border-radius-15: 15px;
+
+  --cursor-effect: pointer;
+
+  //para posicionar arriba de un elemento
+  --position-effect: absolute;
+
+  --img-fit: cover;
+  --width-100_: 100%;
+
+  //opciones de texto
+  --text-center: center;
+  --text-weight: bold;
+
+  //tama;os predefinidos de texto
+  --text-size-large-large: 25px;
+  --text-size-large: 20px;
+  --text-size-medium: 15px;
+  --text-size-small: 12px;
+  --text-size-small-small: 10px;
+
+  //alinear texto dentro de target con imagen
+  --text-mtop-target-title: 20px;
+  --text-mleft-target-title: 25px;
+
+  //sombras
+  --sombra-webkit-box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.22);
+  --sombra-moz-box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.22);
+  --sombra-box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.22);
+
+  //pixeles de pantalla
+  --pixels-xs-min: 0px;
+  --pixels-xs-max: 575px;
+  --pixels-sm-min: 576px;
+  --pixels-sm-max: 767px;
+  --pixels-md-min: 768px;
+  --pixels-md-max: 991px;
+  --pixels-lg-min: 992px;
+  --pixels-lg-max: 1199px;
+  --pixels-xl-min: 1200px;
+  --pixels-xl-max: 1399px;
+  --pixels-xxl-min: 1400px;
+  --pixels-xxl-max: 3820px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--background-general);
+}
+
+//efecto a target con imagenes
+
+//componente padre
+.container-g {
+  @media only screen and (max-width: 1199px) {
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+  }
+
+  background: var(--background-target-general);
+  border-radius: var(--border-radius-20);
+  margin: 100px;
+  padding: 50px;
+}
+
+//estilo global
+.redondear-g {
+  border-radius: var(--border-radius-20);
+}
+
+//componente para cabecero
+.cabecero-g {
+  .img-cabecero {
+    object-fit: var(--img-fit);
+    width: var(--width-100_);
+    height: 250px;
+  }
+
+  .cabecero-title-img {
+    cursor: var(--cursor-effect);
+    position: var(--position-effect);
+    margin-top: 60px;
+    margin-left: 80px;
+    font-weight: var(--text-weight);
+    color: var(--color-primary);
+
+    .cabecero-img-bogota {
+      width: 100px;
+      padding-top: 20px;
+    }
+  }
+
+  //componente hijo logo
+  .cabecero-logo {
+    position: var(--position-effect);
+    margin-left: auto;
+    margin-right: auto;
+
+    .logo-img {
+      margin-top: -200px;
+      margin-left: 50px;
+      width: 200px;
+    }
+  }
+
+  //componente hijo widget-temp
+  .cabecero-widget {
+    cursor: var(--cursor-effect);
+    position: var(--position-effect);
+    border-radius: 0px 20px 30px 0px;
+    width: 80px;
+    text-align: var(--text-center);
+    -webkit-box-shadow: var(--sombra-webkit-box-shadow);
+    -moz-box-shadow: var(--sombra-box-shadow);
+    box-shadow: var(--sombra-box-shadow);
+    margin-left: -62px;
+    margin-top: 60px;
+
+    .icon-top {
+      padding-top: 10px;
+      position: relative;
+      background-color: #34308e;
+      border-radius: 0px 15px 30px 15px;
+
+      .icon {
+        font-size: 35px;
+        color: var(--color-claro);
+      }
+
+      .texto {
+        padding-bottom: 10px;
+        margin-top: -10px;
+        color: var(--color-claro);
+        font-size: var(--text-size-small-small);
+      }
+    }
+
+    .temp-grados {
+      margin-top: -45px;
+      padding-top: 35px;
+      padding-bottom: 1px;
+      background-color: var(--color-secondary);
+      border-radius: 0px 0px 30px 0px;
+
+      .text-temp {
+        color: var(--color-claro);
+        .span {
+          font-size: var(--text-size-small-small);
+        }
+      }
+    }
+  }
+}
+
+//componente para los 3 ultimos dias
+
+.days3 {
+  .title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: var(--text-size-large-large);
+    text-align: var(--text-center);
+  }
+
+  //componente hijo de days3
+  .target-day {
+    border-radius: var(--border-radius-15);
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 0.5px;
+    margin-top: 12px;
+    text-align: var(--text-center);
+    height: 80px;
+
+    .icono {
+      padding-top: 17px;
+      color: var(--color-primary);
+      font-size: 30px;
+    }
+
+    .texto {
+      padding-top: 15px;
+      .dia {
+        font-weight: var(--text-weight);
+        margin: 0%;
+      }
+
+      .tipo {
+        margin: 0%;
+        color: var(--color-gray);
+
+        p {
+          margin: 0%;
+        }
+      }
+    }
+
+    .temp {
+      padding-top: 25px;
+      border-radius: var(--border-radius-15);
+      background: var(--color-primary);
+      color: var(--color-claro);
+      font-size: var(--text-size-medium);
+      cursor: var(--cursor-effect);
+    }
+  }
+}
+
+///componente visit
+.visit {
+  .title-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: var(--text-size-large-large);
+    text-align: var(--text-center);
+  }
+
+  //componente img-target
+  .target-img {
+    .title {
+      margin-top: var(--text-mtop-target-title);
+      position: var(--position-effect);
+      color: var(--color-claro);
+      margin-left: var(--text-mleft-target-title);
+      font-size: var(--text-size-small);
+      font-weight: var(--text-weight);
+
+      p {
+        margin: 0%;
+      }
+    }
+
+    .img {
+      object-fit: var(--img-fit);
+      width: var(--width-100_);
+      height: 265px;
+      border-radius: var(--border-radius-30);
+      cursor: var(--cursor-effect);
+    }
+  }
+}
+
+//Componente images-target
+.targets {
+  @media only screen and (min-width: 1140px) {
+    .container {
+      padding: 0%;
+    }
+  }
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: var(--color-gray);
+  text-align: var(--text-center);
+
+  //componente target revision
+  .target-revision {
+    margin-top: 5px;
+
+    .user-add {
+      font-size: var(--text-size-medium);
+    }
+
+    .top-reviews {
+    }
+
+    .img-person {
+      border-radius: 4px;
+      margin-left: 1px;
+      margin-right: 1px;
+      object-fit: var(--img-fit);
+      width: 17px;
+      height: 17px;
+      margin-top: -3px;
+    }
+
+    .more-users {
+      font-size: 13px;
+      color: var(--color-claro);
+      background: #bfaeff;
+      border-radius: 4px;
+
+      .mas {
+        cursor: var(--cursor-effect);
+        margin: 5px;
+      }
+    }
+  }
+
+  //componente de target peque;o
+  .target-location-small {
+    cursor: var(--cursor-effect);
+    margin-top: 45px;
+
+    .img-target-s {
+      object-fit: var(--img-fit);
+      width: var(--width-100_);
+      height: 80px;
+      border-radius: var(--border-radius-30);
+    }
+
+    .title {
+      position: var(--position-effect);
+      color: var(--color-claro);
+      margin-top: var(--text-mtop-target-title);
+      margin-left: var(--text-mleft-target-title);
+      font-size: var(--text-size-small);
+      font-weight: var(--text-weight);
+
+      p {
+        margin: 0%;
+      }
+    }
+  }
+
+  //componente target location mediano
+  .target-location-medium {
+    cursor: var(--cursor-effect);
+    margin-top: 30px;
+
+    .img-target-m {
+      object-fit: var(--img-fit);
+      width: var(--width-100_);
+      height: 160px;
+      border-radius: var(--border-radius-30);
+      margin-top: -200px;
+    }
+
+    .title {
+      position: var(--position-effect);
+      color: var(--color-claro);
+      margin-top: var(--text-mtop-target-title);
+      margin-left: var(--text-mleft-target-title);
+      font-size: var(--text-size-small);
+      font-weight: var(--text-weight);
+
+      p {
+        margin: 0%;
+      }
+    }
+
+    .add-grande {
+      position: sticky;
+      float: right;
+      color: var(--color-claro);
+      text-align: right;
+      background: var(--color-primary);
+      border-radius: var(--border-radius-30);
+      padding-top: 65px;
+      padding-bottom: 65px;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 6px;
+      cursor: var(--cursor-effect);
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+//componente de target clima
+.target-clima {
+  @media only screen and (min-width: 1200px) {
+    margin-top: -100px;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    margin-top: 40px;
+  }
+
+  //componente target info clima
+  .target-info-clima {
+    cursor: var(--cursor-effect);
+    text-align: var(--text-center);
+    margin-bottom: 30px;
+    border-radius: var(--border-radius-20);
+    background-color: var(--color-claro);
+    -webkit-box-shadow: var(--sombra-webkit-box-shadow);
+    -moz-box-shadow: var(--sombra-box-shadow);
+    box-shadow: var(--sombra-box-shadow);
+
+    .target-top {
+      text-align: var(--text-center);
+
+      .icono {
+        padding-top: 5px;
+        padding-bottom: 15px;
+        background: #c2d8e699;
+        font-size: 40px;
+        border-radius: var(--border-radius-20);
+        margin-left: -12px;
+        color: var(--color-primary);
+      }
+
+      .temperatura {
+        margin-top: 25px;
+        font-size: var(--text-size-large-large);
+        font-weight: var(--text-weight);
+      }
+
+      .pais {
+        margin-top: 20px;
+        border-left: 3px solid rgb(240, 240, 240);
+
+        p {
+          margin: 0%;
+        }
+      }
+    }
+
+    .target-bottom {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: var(--text-size-medium);
+      text-align: var(--text-center);
+      color: var(--color-gray);
+    }
+  }
+
+  //componente target-add-locations
+
+  .target-add-locations {
+    border-radius: var(--border-radius-20);
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #c0c0c0;
+
+    background-color: var(--color-claro);
+    text-align: var(--text-center);
+
+    .button-locations {
+      padding-top: 15px;
+      padding-bottom: 30px;
+
+      .button {
+        background: #ede8ff;
+        border-radius: 25px;
+        font-size: 13px;
+        color: var(--color-primary);
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: var(--text-weight);
+      }
+    }
+
+    .img-location {
+      .img {
+        width: 100px;
+      }
+    }
+  }
+}
