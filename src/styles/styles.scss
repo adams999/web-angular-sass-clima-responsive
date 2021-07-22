@@ -58,6 +58,12 @@
   --pixels-xl-max: 1399px;
   --pixels-xxl-min: 1400px;
   --pixels-xxl-max: 3820px;
+
+  //tama;os de iconos
+  --icon-size-large: 100px;
+  --icon-size-medium: 70px;
+  --icon-size-small: 50px;
+  --icon-size-small-small: 30px;
 }
 
 body {
@@ -137,13 +143,14 @@ body {
     margin-top: 60px;
 
     .icon-top {
-      padding-top: 10px;
+      padding-top: 5px;
       position: relative;
       background-color: #34308e;
       border-radius: 0px 15px 30px 15px;
 
       .icon {
-        font-size: 35px;
+        width: var(--icon-size-medium);
+        font-size: 40px;
         color: var(--color-claro);
       }
 
@@ -405,24 +412,28 @@ body {
       text-align: var(--text-center);
 
       .icono {
-        padding-top: 5px;
-        padding-bottom: 15px;
         background: #c2d8e699;
         font-size: 40px;
         border-radius: var(--border-radius-20);
         margin-left: -12px;
         color: var(--color-primary);
+
+        img {
+          width: 100%;
+        }
       }
 
       .temperatura {
-        margin-top: 25px;
+        margin-top: 8%;
         font-size: var(--text-size-large-large);
         font-weight: var(--text-weight);
       }
 
       .pais {
-        margin-top: 20px;
+        margin-top: 10%;
         border-left: 3px solid rgb(240, 240, 240);
+        font-size: var(--text-size-small);
+        text-align: left;
 
         p {
           margin: 0%;
@@ -433,7 +444,7 @@ body {
     .target-bottom {
       padding-top: 10px;
       padding-bottom: 10px;
-      font-size: var(--text-size-medium);
+      font-size: var(--text-size-small);
       text-align: var(--text-center);
       color: var(--color-gray);
     }

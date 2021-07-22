@@ -22,7 +22,24 @@ import { WidwetTempComponent } from './components/body/cabecero/widwet-temp/widw
 import { LogoComponent } from './components/body/cabecero/logo/logo.component';
 
 @NgModule({
-  declarations: [AppComponent, BodyComponent, CabeceroComponent, Days3Component, Target3DaysComponent, VisitComponent, TargetPaisGComponent, ImagesTargetsComponent, TargetRevisionComponent, TargetLocationSComponent, TargetLocationMComponent, TargetClimaComponent, TargetInfoClimaComponent, TargetAddLocationsComponent, WidwetTempComponent, LogoComponent],
+  declarations: [
+    AppComponent,
+    BodyComponent,
+    CabeceroComponent,
+    Days3Component,
+    Target3DaysComponent,
+    VisitComponent,
+    TargetPaisGComponent,
+    ImagesTargetsComponent,
+    TargetRevisionComponent,
+    TargetLocationSComponent,
+    TargetLocationMComponent,
+    TargetClimaComponent,
+    TargetInfoClimaComponent,
+    TargetAddLocationsComponent,
+    WidwetTempComponent,
+    LogoComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent, DataService],

@@ -1,19 +1,43 @@
-<div class="container target-info-clima">
+<div *ngIf="dataClima == undefined" class="container target-info-clima">
   <div class="row target-top">
     <div class="icono col col-4">
       <i class="bi bi-cloud-sun-fill"></i>
     </div>
-    <div class="temperatura col col-4">29°</div>
+    <div class="temperatura col col-4">0°</div>
 
     <div class="pais col col-4">
-      <p><b>Lyon</b></p>
-      <p>Francia</p>
+      <p><b>City</b></p>
+      <p>Country</p>
     </div>
   </div>
 
   <div class="row target-bottom">
-    <div class="col col-4">Humedad</div>
+    <div class="col col-4">Hum</div>
     <div class="col col-4">Temp</div>
     <div class="col col-4">Kilom</div>
+  </div>
+</div>
+
+<div *ngIf="dataClima !== undefined" class="container target-info-clima">
+  <div class="row target-top">
+    <div class="icono col col-4">
+      <img [src]="dataClima.weather[0].icon_custom" alt="icon" />
+    </div>
+    <div class="temperatura col col-4">
+      {{ dataClima.main.temp | number: "1.0-0" }}°
+    </div>
+
+    <div class="pais col col-4">
+      <p>
+        <b>{{ dataClima.name }}</b>
+      </p>
+      <p>{{ dataClima.sys.countryDescription }}</p>
+    </div>
+  </div>
+
+  <div class="row target-bottom">
+    <div class="col col-4">Humidity {{ dataClima.main.humidity }}%</div>
+    <div class="col col-4">{{ dataClima.weather[0].description }}</div>
+    <div class="col col-4">{{ dataClima.wind.speed }} m/h</div>
   </div>
 </div>

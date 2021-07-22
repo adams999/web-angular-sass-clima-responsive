@@ -1,9 +1,23 @@
 <div class="cabecero-widget">
   <div class="icon-top">
-    <i class="icon bi bi-cloud-sun-fill"></i>
-    <p class="texto">tipo</p>
+    <img
+      *ngIf="dataClima != undefined"
+      class="icon"
+      [src]="dataClima.weather[0].icon_custom"
+      alt="icono"
+    />
+    <i *ngIf="dataClima == undefined" class="icon bi bi-cloud-sun-fill"></i>
+    <p *ngIf="dataClima != undefined" class="texto">
+      {{ dataClima.weather[0].main }}
+    </p>
+    <p *ngIf="dataClima == undefined" class="texto">tipo</p>
   </div>
   <div class="temp-grados">
-    <p class="text-temp">31<span class="span">°c</span></p>
+    <p *ngIf="dataClima != undefined" class="text-temp">
+      {{ dataClima.main.temp | number: "1.0-0" }}<span class="span">°c</span>
+    </p>
+    <p *ngIf="dataClima == undefined" class="text-temp">
+      0<span class="span">°c</span>
+    </p>
   </div>
 </div>
