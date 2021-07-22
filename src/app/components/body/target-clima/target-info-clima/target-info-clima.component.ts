@@ -10,7 +10,7 @@ export class TargetInfoClimaComponent implements OnInit {
   @Input() city: any;
 
   dataClima: any;
-  constructor(private dataService: DataService) {}
+  constructor(public dataService: DataService) {}
 
   ngOnInit(): void {
     this.dataService.getClimaAct(this.city).subscribe((data: any) => {
