@@ -6,12 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   urlClimaActual: string = 'https://api.openweathermap.org/data/2.5/weather?';
-  urlClimaDiario: string = 'https://api.openweathermap.org/data/2.5/forecast?';
+  urlClimaDiario: string = 'https://api.openweathermap.org/data/2.5/onecall?';
   bogotaColombia: string = 'Bogota,,CO';
   parisFrancia: string = 'Paris,,FR';
+  latBogota: string = '4.673253393936639';
+  lonBogota: string = '-74.10093754648891';
   appId: string = '&appid=4b8ffff687b78eea80a52d01f3dd1e93';
   units: string = '&units=metric';
   cant: string = '&cnt=20';
+  exclude: string = '&exclude=hourly,minutely';
 
   constructor(public http: HttpClient) {
     const headers = new HttpHeaders()
@@ -25,13 +28,19 @@ export class DataService {
     );
   }
 
-  getClima3daysNext(paramCity: string = this.parisFrancia) {
+  getClima3daysNextBogota(
+    lat: string = this.latBogota,
+    lon: string = this.lonBogota
+  ) {
     return this.http.get(
       this.urlClimaDiario +
-        'q=' +
-        paramCity +
+        '&lat=' +
+        lat +
+        '&lon=' +
+        lon +
         this.units +
         this.cant +
+        this.exclude +
         this.appId
     );
   }

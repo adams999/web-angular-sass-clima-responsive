@@ -13,14 +13,12 @@ export class TargetInfoClimaComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log(this.city);
     this.dataService.getClimaAct(this.city).subscribe((data: any) => {
       data.weather[0].icon_custom = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       data.sys.countryDescription = this.dataService.getCountries(
         data.sys.country
       );
       this.dataClima = data;
-      console.log(data);
     });
   }
 }

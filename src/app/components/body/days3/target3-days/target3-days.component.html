@@ -1,14 +1,28 @@
-<div class="container">
+<div class="container" *ngIf="dataDay == undefined">
   <div class="row target-day">
     <div class="icono col col-3">
       <i class="bi bi-cloud-rain-heavy-fill"></i>
     </div>
     <div class="texto col col-5">
-        <p class="dia">Dia</p>    
-        <p class="tipo">tipo</p>
+      <p class="dia">Dia</p>
+      <p class="tipo">tipo</p>
+    </div>
+    <div class="temp col col-4 text-wrap">32° / 23°</div>
+  </div>
+</div>
+
+<div class="container" *ngIf="dataDay != undefined">
+  <div class="row target-day">
+    <div class="icono col col-3">
+      <img [src]="dataDay.weather[0].icon_custom" alt="icono" />
+    </div>
+    <div class="texto col col-5">
+      <p class="dia">{{ getDayWeek() }}</p>
+      <p class="tipo">{{ dataDay.weather[0].main }}</p>
     </div>
     <div class="temp col col-4 text-wrap">
-        32° / 23°
+      {{ dataDay.temp.max | number: "1.0-0" }}° /
+      {{ dataDay.temp.min | number: "1.0-0" }}°
     </div>
   </div>
 </div>

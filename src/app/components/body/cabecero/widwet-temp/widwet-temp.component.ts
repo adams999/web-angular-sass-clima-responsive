@@ -16,7 +16,6 @@ export class WidwetTempComponent implements OnInit {
     this.dataService.getClimaAct(this.cityParam).subscribe((data: any) => {
       data.weather[0].icon_custom = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       this.dataClima = data;
-      console.log(data);
     });
   }
 }

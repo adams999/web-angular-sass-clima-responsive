@@ -87,6 +87,7 @@ body {
   border-radius: var(--border-radius-20);
   margin: 100px;
   padding: 50px;
+  padding-bottom: 0%;
 }
 
 //estilo global
@@ -123,9 +124,9 @@ body {
     margin-right: auto;
 
     .logo-img {
-      margin-top: -200px;
-      margin-left: 50px;
-      width: 200px;
+      margin-top: -210px;
+      margin-left: -90px;
+      width: 50px;
     }
   }
 
@@ -200,14 +201,21 @@ body {
     height: 80px;
 
     .icono {
-      padding-top: 17px;
+      padding: 0%;
+      margin: auto;
       color: var(--color-primary);
       font-size: 30px;
+
+      img {
+        width: var(--icon-size-medium);
+      }
     }
 
     .texto {
       padding-top: 15px;
+
       .dia {
+        color: #464646;
         font-weight: var(--text-weight);
         margin: 0%;
       }
@@ -229,6 +237,7 @@ body {
       color: var(--color-claro);
       font-size: var(--text-size-medium);
       cursor: var(--cursor-effect);
+      font-weight: bold;
     }
   }
 }
@@ -478,7 +487,7 @@ body {
 
     .img-location {
       .img {
-        width: 100px;
+        width: 115px;
       }
     }
   }

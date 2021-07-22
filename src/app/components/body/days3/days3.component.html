@@ -1,9 +1,9 @@
 <div class="days3">
   <div class="title">
-    <p ><b>3 Days</b> Forecast</p>
+    <p><b>3 Days</b> Forecast</p>
   </div>
 
-  <app-target3-days></app-target3-days>
-  <app-target3-days></app-target3-days>
-  <app-target3-days></app-target3-days>
+  <div *ngFor="let dia of days; let i = index">
+    <app-target3-days indice="{{ i + 1 }}"></app-target3-days>
+  </div>
 </div>
