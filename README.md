@@ -1,6 +1,7 @@
 Pagina web responsive realizada en: 
 Angular 11, 
 Bootstrap 5, 
+Bootstrap Icons,
 sass, 
 scss,
 css,
