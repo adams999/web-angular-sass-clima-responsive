@@ -141,7 +141,7 @@ body {
     .logo-img {
       margin-top: -200px;
       margin-left: -50px;
-      width: 50px;
+      width: 40px;
     }
   }
 
@@ -515,5 +515,23 @@ body {
         width: 115px;
       }
     }
+  }
+}
+
+//componente de footer
+.footer {
+  margin-top: -50px;
+  margin-bottom: 40px;
+  text-align: center;
+
+  .gitRepo {
+    a {
+      text-decoration: none;
+      color: var(--color-primary);
+    }
+  }
+
+  .autorFooter {
+    color: var(--color-secondary);
   }
 }

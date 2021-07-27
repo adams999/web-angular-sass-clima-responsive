@@ -20,6 +20,7 @@ import { TargetInfoClimaComponent } from './components/body/target-clima/target-
 import { TargetAddLocationsComponent } from './components/body/target-clima/target-add-locations/target-add-locations.component';
 import { WidwetTempComponent } from './components/body/cabecero/widwet-temp/widwet-temp.component';
 import { LogoComponent } from './components/body/cabecero/logo/logo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { LogoComponent } from './components/body/cabecero/logo/logo.component';
     TargetAddLocationsComponent,
     WidwetTempComponent,
     LogoComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DataService],
